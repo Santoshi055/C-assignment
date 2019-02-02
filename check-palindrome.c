@@ -15,7 +15,7 @@ int main()
     printf("The string is a palindrome.\n");
   else
     printf("The string isn't a palindrome.\n");
-	
+	// to stop console from closing
 	int xam;
 	scanf("%d",&xam);
  

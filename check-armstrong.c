@@ -3,21 +3,26 @@
  
 int main()
 {
-  char a[100], b[100];
- 
-  printf("Enter a string to check if it is a palindrome\n");
-  gets(a);
- 
-  strcpy(b, a);  // Copying input string
-  strrev(b);  // Reversing the string
- 
-  if (strcmp(a, b) == 0)  // Comparing input string with the reverse string
-    printf("The string is a palindrome.\n");
+  int number;
+  printf("enter the number to check\n");
+  scanf("%d",&number);
+	int cubesum=0,temp=number;
+  while(temp>0)
+  {
+    int v=temp%10;
+    cubesum+=v*v*v;
+    temp=temp/10;
+  }
+  if(cubesum==number)
+  {
+      printf("%d is Armstrong Number\n", number);
+  }
   else
-    printf("The string isn't a palindrome.\n");
-	
+  {
+      printf("%d is not a Armstrong Number\n",number );
+  }
+  // to stop console from closing
 	int xam;
-	scanf("%d",&xam);
- 
+	scanf("%d",&xam); 
   return 0;
 }
